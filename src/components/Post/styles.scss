@@ -54,7 +54,7 @@
   &-title {
     font-family: vars.$title-font;
     font-weight: vars.$title-font-weight;
-    font-size: 1.3em;
+    font-size: 2em;
     color: vars.$title-color;
     text-transform: uppercase;
     margin-bottom: 0.5rem;
@@ -65,7 +65,7 @@
     color: vars.$light-color;
     display: inline-block;
     padding: 0.3em 0.7em;
-    font-size: 0.8em;
+    font-size: 1.2em;
     text-transform: uppercase;
     font-weight: 700;
   }
@@ -74,5 +74,7 @@
     margin-top: 0.5rem;
     font-weight: 300;
     color: vars.$post-text-color;
+    font-size: 1.5em;
+
   }
 }

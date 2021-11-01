@@ -6,13 +6,14 @@ import './styles.scss';
 const Post = ({
   id, category, excerpt, title, className,
 }) => {
+  // si className = true, alors on passe en mode zen, sinon on reste en mode post
   const classType = className ? 'post-zen' : 'post';
 
   return (
     <article className={classType}>
-      <h2 className="post-title">{title}</h2>
-      <div className="post-category">{category}</div>
-      <p className="post-excerpt">{excerpt}</p>
+      <h2 className={`${ classType }-title`}>{title}</h2>
+      <div className={`${ classType }-category`}>{category}</div>
+      <p className={`${ classType }-excerpt`}>{excerpt}</p>
     </article>
   );
 };

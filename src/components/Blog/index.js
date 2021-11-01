@@ -12,12 +12,11 @@ import './styles.scss';
 
 // == Composant
 class Blog extends React.PureComponent {
+
+  // className = false > mode avec class .post
+  // quand on clique sur le bouton, className devient vrai, et dans le composant Header, si className = true alors on met la classe .post-zen
   state = {
     className: false,
-  }
-
-  setClassName = (className) => {
-    this.setState({ className });
   }
 
   toggleZenMode = () => {
