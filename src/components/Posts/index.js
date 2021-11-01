@@ -5,14 +5,14 @@ import Post from 'src/components/Post';
 
 import './styles.scss';
 
-const Posts = ({postsData}) => (
+const Posts = ({postsData, className}) => (
   <main className="posts">
     <h1 className="posts-title">Dev Of Thrones</h1>
     <div className="posts-list">
 
       {
         postsData.map(
-          (post) => <Post key={post.id} {...post}/>
+          (post) => <Post key={post.id} {...post} className={className}/>
         )
 
       }
@@ -29,7 +29,8 @@ Posts.propTypes = {
       title: PropTypes.string.isRequired, 
       excerpt: PropTypes.string.isRequired, 
     })
-  ).isRequired
+  ).isRequired,
+  className: PropTypes.bool.isRequired, 
 }
 
 export default React.memo(Posts);

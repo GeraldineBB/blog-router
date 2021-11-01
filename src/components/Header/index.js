@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import './styles.scss';
 
-const Header = ({ categoriesData }) => (
+const Header = ({ categoriesData, toggleZenMode }) => (
   <header className="menu">
     <nav>
       {
@@ -16,7 +16,18 @@ const Header = ({ categoriesData }) => (
       }
       {/* <a className="menu-link menu-link--selected" href="">Accueil</a> */}
 
-      <button className="menu-btn" type="button">Activer le mode zen</button>
+      <button 
+        className="menu-btn" 
+        type="button"
+        onClick={
+          (event) => {
+            console.log(event); 
+            toggleZenMode(); 
+          }
+        }
+        >
+        Activer le mode zen
+      </button>
 
     </nav>
   </header>
@@ -29,6 +40,7 @@ Header.propTypes = {
       label: PropTypes.string.isRequired,
     }),
   ).isRequired,
+  toggleZenMode: PropTypes.func.isRequired, 
 };
 
 export default React.memo(Header);
