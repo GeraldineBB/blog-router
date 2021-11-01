@@ -1,3 +1,5 @@
+import React from 'react';
+
 // Composants
 import Header from 'src/components/Header';
 import Posts from 'src/components/Posts';
@@ -9,17 +11,28 @@ import postsData from 'src/data/posts';
 import './styles.scss';
 
 // == Composant
-const Blog = () => {
-  console.log(categoriesData);
-  console.log(postsData);
+class Blog extends React.PureComponent {
 
-  return (
-    <div className="blog">
-      <Header />
-      <Posts />
-      <Footer />
-    </div>
-  );
+  state = {
+    className: 'post-zen', 
+  }
+
+  render() {
+
+    console.log(categoriesData);
+    console.log(postsData); 
+
+    const { className } = this.state; 
+
+    return (
+      <div className="blog">
+        <Header categoriesData={categoriesData}/>
+        <Posts postsData={postsData} className={className}/>
+        <Footer />
+      </div>
+    );
+  }
+
 };
 
 // == Export

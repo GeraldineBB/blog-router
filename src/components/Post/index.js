@@ -1,11 +1,21 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
 import './styles.scss';
 
-const Post = () => (
+const Post = ({id, category, excerpt, title, className}) => (
   <article className="post">
-    <h2 className="post-title">Titre du post</h2>
-    <div className="post-category">tag</div>
-    <p className="post-excerpt">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed mollitia ad incidunt cum sunt voluptatum, fuga quos vero aliquid veniam.</p>
+    <h2 className="post-title">{title}</h2>
+    <div className="post-category">{category}</div>
+    <p className="post-excerpt">{excerpt}</p>
   </article>
 );
 
-export default Post;
+Post.propTypes = {
+  id: PropTypes.number.isRequired, 
+  category: PropTypes.string.isRequired, 
+  title: PropTypes.string.isRequired, 
+  excerpt: PropTypes.string.isRequired, 
+}
+
+export default React.memo(Post);
