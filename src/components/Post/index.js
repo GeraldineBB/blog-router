@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import './styles.scss';
 
 const Post = ({
-  id, category, excerpt, title, className,
+  category, excerpt, title, className,
 }) => {
   // si className = true, alors on passe en mode zen, sinon on reste en mode post
   const classType = className ? 'post-zen' : 'post';
@@ -19,7 +19,6 @@ const Post = ({
 };
 
 Post.propTypes = {
-  id: PropTypes.number.isRequired,
   category: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   excerpt: PropTypes.string.isRequired,

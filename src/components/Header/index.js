@@ -8,10 +8,8 @@ const Header = ({ categoriesData, toggleZenMode }) => (
   <header className="menu">
     <nav>
       {
-
       categoriesData.map(
-        (category) => <a key={category.label} className="menu-link" href="">{category.label}</a>,
-
+        (category) => <a key={category.label} className="menu-link" href={category.route}>{category.label}</a>,
       )
       }
       {/* <a className="menu-link menu-link--selected" href="">Accueil</a> */}

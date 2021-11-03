@@ -25,9 +25,6 @@ Posts.propTypes = {
   postsData: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired, 
-      category: PropTypes.string.isRequired, 
-      title: PropTypes.string.isRequired, 
-      excerpt: PropTypes.string.isRequired, 
     })
   ).isRequired,
   className: PropTypes.bool.isRequired, 
