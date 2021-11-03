@@ -3,11 +3,11 @@
 .posts {
   max-width: 800px;
   margin: vars.$gutter auto;
-  
+
   &--zen{
     font-size: 1.5em;
   }
-  
+
   &-title {
     color: vars.$primary-color;
     font-family: vars.$title-font;

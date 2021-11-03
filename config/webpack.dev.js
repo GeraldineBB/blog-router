@@ -3,15 +3,11 @@ const webpack = require('webpack');
 const { merge } = require('webpack-merge');
 const common = require('./webpack.common.js');
 
-const port = 8080;
+const port = 9000;
 
 module.exports = merge(common, {
   mode: 'development',
   devtool: 'inline-source-map',
-  plugins: [
-    // Recharge uniquement ce qu'il y a besoin
-    new webpack.HotModuleReplacementPlugin(),
-  ],
   module: {
     rules: [
       // Styles

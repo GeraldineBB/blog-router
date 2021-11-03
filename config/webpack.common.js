@@ -61,21 +61,25 @@ module.exports = {
           },
         ],
       },
+
+      // Fonts
+      {
+        test: /\.(woff2?|eot|ttf|otf)$/,
+        loader: 'file-loader',
+        options: {
+          outputPath: 'fonts/',
+        },
+      },
+
       // Images
       {
-        test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
-        type: 'asset/resource',
-        generator: {
-          filename: 'images/[hash][ext][query]'
-        }
-      },
-      // Fonts and SVGs
-      {
-        test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
-        type: 'asset',
-        generator: {
-          filename: 'fonts/[hash][ext][query]'
-        }
+        test: /\.(ico|gif|png|jpe?g|webp|svg)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: { outputPath: 'images/' },
+          },
+        ],
       },
     ],
   },

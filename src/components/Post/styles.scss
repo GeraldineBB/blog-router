@@ -1,5 +1,9 @@
 @use 'src/styles/vars';
 
+.posts--zen .post{
+  width: 100%;
+}
+
 .post {
   width: 100%;
   padding: vars.$gutter;
@@ -35,46 +39,5 @@
     margin-top: 0.5rem;
     font-weight: 300;
     color: vars.$post-text-color;
-  }
-}
-
-
-.post-zen {
-  width: 100%;
-  padding: vars.$gutter;
-
-  @media (min-width: 600px) {
-    width: 100%;
-  }
-
-  &:hover {
-    background-color: vars.$post-hover-color;
-  }
-
-  &-title {
-    font-family: vars.$title-font;
-    font-weight: vars.$title-font-weight;
-    font-size: 2em;
-    color: vars.$title-color;
-    text-transform: uppercase;
-    margin-bottom: 0.5rem;
-  }
-
-  &-category {
-    background-color: vars.$primary-color;
-    color: vars.$light-color;
-    display: inline-block;
-    padding: 0.3em 0.7em;
-    font-size: 1.2em;
-    text-transform: uppercase;
-    font-weight: 700;
-  }
-
-  &-excerpt {
-    margin-top: 0.5rem;
-    font-weight: 300;
-    color: vars.$post-text-color;
-    font-size: 1.5em;
-
   }
 }
